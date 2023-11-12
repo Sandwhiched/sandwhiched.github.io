@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>SystemTomcat</title>
+    <link rel="stylesheet" href="assets/css/stylesheet.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" />
+    <script src="assets/js/logic.js"></script>
+</head>
+<body class="is-preload">
+
+    <div id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="#">Article Name</a> <!-- CHANGE ME CHANGE ME CHANGE ME -->
+        <a href="#" onclick="toggleSidebar()">☰ Close</a>
+    </div>
+
+    <header id="header">
+        <div id="nav">
+            <ul>
+                <li><a href="#" onclick="toggleSidebar()">☰ Menu</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="wrapper">
+        <div id="main">
+            <div class="inner">
+                <article>
+                    <header>
+                        <h1>Interesting article header</h1>
+                    </header>
+
+                    <p>Lorem ipsum.</p>
+                </article>
+
+                <!-- Copyright details -->
+                <footer style="text-align: center; margin-top: 20px; color: gray;">
+\                   &copy; Copyright SystemTomcat [date]. All rights reserved.
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
