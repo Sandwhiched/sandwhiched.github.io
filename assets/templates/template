@@ -3,41 +3,54 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>SystemTomcat</title>
+    <title>Template</title> <!-- CHANGE ME CHANGE ME CHANGE ME -->
     <link rel="stylesheet" href="assets/css/stylesheet.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" />
     <script src="assets/js/logic.js"></script>
+    <link rel="shortcut icon" href="assets/img/systemtomcat-square-16.png" type="image/x-icon">
 </head>
 <body class="is-preload">
 
+    <!-- Sidebar -->
     <div id="sidebar">
-        <a href="index.html">Home</a>
-        <a href="#">Article Name</a> <!-- CHANGE ME CHANGE ME CHANGE ME -->
-        <a href="#" onclick="toggleSidebar()">☰ Close</a>
+        <a href="#" onclick="toggleSidebar()" align="left" class="sidebar-button">☰</a>
+        <a href="https://sparkcoretech.com">Home</a>
     </div>
 
+    <!-- Navigation bar -->
     <header id="header">
         <div id="nav">
             <ul>
-                <li><a href="#" onclick="toggleSidebar()">☰ Menu</a></li>
+                <li><a href="#" onclick="toggleSidebar()" class="sidebar-button">☰</a></li>
+                <li>
+                    <a href="#"><img src="assets/img/systemtomcat-square.png" alt="SystemTomcat logo"
+                    width="64" height="64"></a>
+                </li>
             </ul>
         </div>
     </header>
 
+    <!-- Wrapper -->
     <div id="wrapper">
+        <!-- Main -->
         <div id="main">
+            <!-- Inner -->
             <div class="inner">
+                <!-- Intro -->
                 <article>
                     <header>
-                        <h1>Interesting article header</h1>
+                        <h2>Template</h2> <!-- CHANGE ME CHANGE ME CHANGE ME -->
                     </header>
 
-                    <p>Lorem ipsum.</p>
+                    <p>
+                        Lorem ipsum
+                        <br>The quick brown fox jumps over the lazy dog.index.html
+                    </p>
                 </article>
 
                 <!-- Copyright details -->
                 <footer style="text-align: center; margin-top: 20px; color: gray;">
-\                   &copy; Copyright SystemTomcat [date]. All rights reserved.
+                    &copy; Copyright SystemTomcat [year]. All rights reserved. <!-- CHANGE ME CHANGE ME CHANGE ME -->
                 </footer>
             </div>
         </div>
