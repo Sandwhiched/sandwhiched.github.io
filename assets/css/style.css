@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #1e90ff;
+    color: white;
+}
+
+body.dark-mode {
+    font-family: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #3a3a3a;
+    color: white;
+}
+
+header {
+    font-family: 'Madimi One';
+    padding: 20px;
+    text-align: center;
+    background: #1e90ff;
+    color: white;
+}
+
+header.dark-mode {
+    font-family: 'Madimi One';
+    padding: 20px;
+    text-align: center;
+    background: #3a3a3a;
+    color: white;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+.navbar {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    border: 4px double;
+}
+
+.navbar {
+    background-color: #1e90ff;
+}
+
+.navbar.dark-mode {
+    background-color: #3a3a3a;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar a:hover {
+    background-color: #57a6f5;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #60aefd;
+    color: white;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.side {
+    -ms-flex: 30%;
+    flex: 30%;
+    background: #1e90ff;
+    padding: 20px;
+}
+
+.main {
+    -ms-flex: 70%;
+    flex: 70%;
+    background: #1e90ff;
+    padding: 20px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
