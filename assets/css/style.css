@@ -1,3 +1,15 @@
+.lightMode {
+    --primary-color: #1e90ff;
+    --secondary-color: #57a6f5;
+    --tertiary-color: #60aefd;
+}
+
+.darkMode {
+    --primary-color: #092a4b;
+    --secondary-color: #1b334b;
+    --tertiary-color: #21364b;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -5,14 +17,7 @@
 body {
     font-family: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
     margin: 0;
-    background: #1e90ff;
-    color: white;
-}
-
-body.dark-mode {
-    font-family: 'Ubuntu Condensed', Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #3a3a3a;
+    background: var(--primary-color);
     color: white;
 }
 
@@ -20,33 +25,22 @@ header {
     font-family: 'Madimi One';
     padding: 20px;
     text-align: center;
-    background: #1e90ff;
-    color: white;
-}
-
-header.dark-mode {
-    font-family: 'Madimi One';
-    padding: 20px;
-    text-align: center;
-    background: #3a3a3a;
+    background: var(--primary-color);
     color: white;
 }
 
 header h1 {
     font-size: 40px;
+    
 }
 
 .navbar {
     overflow: hidden;
     position: sticky;
     top: 0;
-    background-color: #1e90ff;
+    background-color: var(--primary-color);
     margin-left: 15px;
     margin-right: 15px;
-}
-
-.navbar.dark-mode {
-    background-color: #3a3a3a;
 }
 
 .navbar a {
@@ -62,14 +56,16 @@ header h1 {
     float: right;
 }
 
-.navbar a:hover {
-    background-color: #57a6f5;
-    color: black;
+.navbar-icons {
+    float: right;
+    display: flex;
+    align-items: center;
 }
 
-.navbar a.active {
-    background-color: #60aefd;
-    color: white;
+.navbar-icons img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
 }
 
 .row {
@@ -82,14 +78,14 @@ header h1 {
 .side {
     -ms-flex: 30%;
     flex: 30%;
-    background: #1e90ff;
+    background: var(--primary-color);
     padding: 20px;
 }
 
 .main {
     -ms-flex: 70%;
     flex: 70%;
-    background: #1e90ff;
+    background: var(--primary-color);
     padding: 20px;
 }
 

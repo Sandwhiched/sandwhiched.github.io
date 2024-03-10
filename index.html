@@ -10,29 +10,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 </head>
-<body>
+
+<body class="lightMode">
 <header>
   <h1>Frothy Wi-Fi</h1>
 </header>
+
 <div class="navbar">
   <a class="active">Home</a>
   <a href="download-center.html">Download Center</a>
   <a href="blogs.html">Blogs</a>
-  <a href="https://github.com/frothy-wifi">GitHub profile</a>
-  <a href="javascript:alert('Feature not ready :(');" class="right">Dark mode</a>
+  <div class="navbar-icons">
+    <img src="assets/img/gh-icon.png" onclick="window.open('https:/github.com/frothy-wifi', '_blank')">
+    <a href="javascript:toggleDarkMode();" class="right">Dark mode</a>
+  </div>
 </div>
+
 <div class="row">
   <div class="main">
     <h2>Welcome!</h2>
     <p>Hello! I'm an aspiring software developer that also loves to play games.</p>
-    <p>Here are some things I'm adding:</p>
-    <div style="border:4px double;margin:4px 4px 4px 4px;list-style-position:inside;text-align:center;">
-      <ol>
-        <li>Dark mode&mdash;0<sup>%</sup></li>
-        <li>Remember dark mode preference&mdash;0<sup>%</sup></li>
-      </ol>
-    </div>
+    <p>Not much here yet, but everything starts off small!</p>
   </div>
 </div>
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>

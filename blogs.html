@@ -9,22 +9,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body class="lightMode">
 <header>
   <h1>Frothy Wi-Fi</h1>
 </header>
+
 <div class="navbar">
   <a href="https://frothywifi.cc">Home</a>
   <a href="download-center.html">Download Center</a>
   <a class="active">Blogs</a>
-  <a href="https://github.com/frothy-wifi">GitHub profile</a>
-  <a href="javascript:alert('Feature not ready :(');" class="right">Dark mode</a>
+  <div class="navbar-icons">
+    <img src="assets/img/gh-icon.png" onclick="window.open('https:/github.com/frothy-wifi', '_blank')">
+    <a href="javascript:toggleDarkMode();" class="right">Dark mode</a>
+  </div>
 </div>
+
 <div class="row">
   <div class="main">
     <h2>Blogs</h2>
     <p>This is where blog articles will go when they're made.</p>
   </div>
 </div>
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>
