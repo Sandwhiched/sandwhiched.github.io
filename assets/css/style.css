@@ -30,8 +30,7 @@ header {
 }
 
 header h1 {
-    font-size: 40px;
-    
+    font-size: 40px;   
 }
 
 .navbar {
@@ -54,6 +53,10 @@ header h1 {
 
 .navbar a.right {
     float: right;
+}
+
+.active {
+    cursor: not-allowed;
 }
 
 .navbar-icons {
