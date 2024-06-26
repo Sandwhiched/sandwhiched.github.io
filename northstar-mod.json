@@ -1,0 +1,116 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://frothywifi.cc/northstar-mod.json",
+    "title": "Titanfall 2 + Northstar mod manifest",
+    "description": "For Northstar mod.json files",
+    "type": "object",
+    "properties": {
+        "Name": {
+            "description": "The name of the mod.",
+            "type": "string"
+        },
+        "Description": {
+            "description": "The description of the mod.",
+            "type": "string"
+        },
+        "LoadPriority": {
+            "description": "The load priority of the mod. If using code from another mod, make sure that your load priority is higher than the other mod's.",
+            "type": "number"
+        },
+        "ConVars": {
+            "description": "Any configuration variables for the mod. ConVars are persistent configurable variables. No matter the type of your variables, they have to be strings, otherwise the game will not start.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Name": {
+                        "description": "The name of the ConVar.",
+                        "type": "string"
+                    },
+                    "DefaultValue": {
+                        "description": "The default value for the ConVar.",
+                        "type": "string"
+                    },
+                    "HelpString": {
+                        "description": "The help message for the ConVar.",
+                        "type": "string"
+                    },
+                    "Flags": {
+                        "description": "Any custom behaviors for the ConVar. Check the modding docs for more info.",
+                        "type": "integer"
+                    }
+                },
+                "required": [
+                    "Name",
+                    "DefaultValue"
+                ]
+            },
+            "uniqueItems": true
+        },
+        "Scripts": {
+            "description": "rSquirrel scripts for the mod. Scripts define custom logic.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "Path": {
+                        "description": "The path to the script, without the `scripts/vscripts` prefix (which is the directory they should go in.",
+                        "type": "string"
+                    },
+                    "RunOn": {
+                        "description": "A boolean expression that defines when the script should be compiled and used. Check the modding docs for more info.",
+                        "type": "string"
+                    },
+                    "ClientCallback": {
+                        "description": "A callback function run before or after map spawn on the CLIENT VM.",
+                        "type": "object",
+                        "items": {
+                            "Before": {
+                                "description": "A callback function to be run before map spawn.",
+                                "type": "string"
+                            },
+                            "After": {
+                                "description": "A callback function to be run after map spawn",
+                                "type": "string"
+                            }
+                        },
+                        "minItems": 1
+                    },
+                    "ServerCallback": {
+                        "description": "A callback function run before or after map spawn on the SERVER VM.",
+                        "type": "object",
+                        "items": {
+                            "Before": {
+                                "description": "A callback function to be run before map spawn.",
+                                "type": "string"
+                            },
+                            "After": {
+                                "description": "A callback function to be run after map spawn",
+                                "type": "string"
+                            }
+                        },
+                        "minItems": 1
+                    }
+                },
+                "required": [
+                    "Path",
+                    "RunOn"
+                ]
+            },
+            "uniqueItems": true
+        },
+        "Localisation": {
+            "description": "Localization files. Contain information about languages.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "uniqueItems": true
+        }
+    },
+    "required": [
+        "Name",
+        "Description",
+        "LoadPriority"
+    ]
+}
