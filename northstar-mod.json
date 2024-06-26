@@ -13,6 +13,10 @@
             "description": "The description of the mod.",
             "type": "string"
         },
+        "Version": {
+            "description": "The version of the mod. Best practice is to use semantic versioning.",
+            "type": "string"
+        },
         "LoadPriority": {
             "description": "The load priority of the mod. If using code from another mod, make sure that your load priority is higher than the other mod's.",
             "type": "number"
