@@ -54,7 +54,7 @@
                 "type": "object",
                 "properties": {
                     "Path": {
-                        "description": "The path to the script, without the `scripts/vscripts` prefix (which is the directory they should go in.",
+                        "description": "The path to the script, without the `scripts/vscripts` prefix (which is the directory they should go in.)",
                         "type": "string"
                     },
                     "RunOn": {
@@ -64,7 +64,7 @@
                     "ClientCallback": {
                         "description": "A callback function run before or after map spawn on the CLIENT VM.",
                         "type": "object",
-                        "items": {
+                        "properties": {
                             "Before": {
                                 "description": "A callback function to be run before map spawn.",
                                 "type": "string"
@@ -79,7 +79,7 @@
                     "ServerCallback": {
                         "description": "A callback function run before or after map spawn on the SERVER VM.",
                         "type": "object",
-                        "items": {
+                        "properties": {
                             "Before": {
                                 "description": "A callback function to be run before map spawn.",
                                 "type": "string"
